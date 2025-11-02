@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RooTed DBN</title>
+  <script src="https://kit.fontawesome.com/a2b9e8f1b0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylesheet/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://img.icons8.com/ios-filled/50/2ecc71/user-group-man-man.png" alt="Logo" />
+      <h1>RooTed DBN</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="games.html">Games</a>
+      <a href="about.html">About Us</a>
+      <a href="donate.html" class="donate">Donate</a>
+    </nav>
+  </header>
+<body>
+  <section class="donation-section">
+    <h2>Support Our Mission</h2>
+    <p class="subtitle">
+      Your generous donations help us provide quality programs, events, and resources for our youth and teens.
+    </p>
+
+    <!-- Fundraising Progress -->
+    <div class="progress-card">
+      <h3><i class="fa-solid fa-chart-line"></i> Fundraising Progress</h3>
+      <p>Help us reach our goal to expand our programs</p>
+      <div class="amounts">
+        <span id="raisedAmount">R24,750</span>
+        <span>of R50,000 goal</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+      <p id="progressText">49.5% funded - Thank you to all our generous donors!</p>
+    </div>
+
+    <!-- Donation Form & Impact -->
+    <div class="donation-container">
+      <!-- Donation Form -->
+      <div class="donate-card">
+        <h3><i class="fa-regular fa-heart"></i> Make a Donation</h3>
+        <p>Every contribution makes a difference</p>
+
+        <label for="donationInput">Donation Amount (R)</label>
+        <input type="number" id="donationInput" placeholder="0.00" min="1" />
+
+        <div class="preset-buttons">
+          <button class="preset" data-amount="50">R50</button>
+          <button class="preset" data-amount="100">R100</button>
+          <button class="preset" data-amount="250">R250</button>
+          <button class="preset" data-amount="500">R500</button>
+        </div>
+
+        <button id="donateBtn">Donate Now</button>
+        <p class="note">You'll be asked to confirm your donation.</p>
+      </div>
+
+      <!-- Impact Section -->
+      <div class="impact-card">
+        <h3>Impact of Your Donation</h3>
+        <p>See how your contribution helps</p>
+        <ul>
+          <li><span class="impact-tag">R50</span> Provides materials for one teen's Bible study</li>
+          <li><span class="impact-tag">R100</span> Sponsors refreshments for a youth event</li>
+          <li><span class="impact-tag">R250</span> Covers venue costs for a workshop</li>
+          <li><span class="impact-tag">R500</span> Funds a full leadership training session</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="thankYouModal" class="modal">
+    <div class="modal-content">
+      <h3>🎉 Thank You!</h3>
+      <p>Your donation has been received and added to our goal.</p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-container">
+    <!-- Logo & Description -->
+    <div class="footer-section">
+      <h3 class="footer-logo">RooTed DBN</h3>
+      <p>Empowering youth and teens to grow in faith, build community, and discover their purpose in Christ.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <ul class="contact-info">
+        <li><i class="fa fa-envelope"></i> info@rooteddbn.org</li>
+        <li><i class="fa fa-phone"></i> +27 12 345 6789</li>
+        <li><i class="fa fa-map-marker"></i> Durban, South Africa</li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+        <a href="https://www.instagram.com/rooted_dbn/"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+        <a href="https://twitter.com/"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+     </div>
+      <p>Stay connected with our community</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 RooTed DBN. All rights reserved. Building faith, one youth at a time.</p>
+  </div>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
