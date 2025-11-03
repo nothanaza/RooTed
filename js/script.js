@@ -23,7 +23,6 @@ window.addEventListener("scroll", () => {
   window.addEventListener('load', syncBodyPadding);
   window.addEventListener('resize', syncBodyPadding);
 
-  
 // ========== LOGIN SYSTEM ==========
 function getUsers() {
   return JSON.parse(localStorage.getItem("users") || "[]");
@@ -93,7 +92,9 @@ document.getElementById("signinBtn")?.addEventListener("click", () => {
 });
 
 // ========== DONATION SYSTEM ==========
-let raised = parseFloat(localStorage.getItem("raised")) || 24750;
+let raised = parseFloat(localStorage.setItem('raised','0'));
+if (isNaN(raised) || raised < 0) raised = 0;
+
 const goal = 50000;
 const input = document.getElementById("donationInput");
 const donateBtn = document.getElementById("donateBtn");
@@ -103,7 +104,7 @@ const progressText = document.getElementById("progressText");
 
 function updateProgress() {
   if (!progressFill || !progressText || !raisedAmount) return;
-  const percent = (raised / goal) * 100;
+  const percent = Math.max(0, Math.min(100, (raised / goal) * 100));
   progressFill.style.width = `${percent}%`;
   progressText.textContent = `${percent.toFixed(1)}% funded`;
   raisedAmount.textContent = `R${raised.toLocaleString()}`;
